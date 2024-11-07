@@ -18,6 +18,4 @@ servidorHttp.listen(porta, () => console.log(`Servidor escutandi na porta ${port
 
 const io = new Server(servidorHttp);
 
-io.on("connection", () =>{
-    console.log("Cliente conectado");
-});
+export default io;
