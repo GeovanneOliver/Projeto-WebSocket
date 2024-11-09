@@ -1,6 +1,8 @@
 import { MongoClient } from "mongodb";
+import * as dotenv from "dotenv";
+dotenv.config();
 
-const cliente = new MongoClient("mongodb+srv://alura:123@aluracluster.ft4lk.mongodb.net/?retryWrites=true&w=majority&appName=AluraCluster");
+const cliente = new MongoClient(process.env.DB_CONNECTION_STRING);
 
 let documentosColecao;
 
